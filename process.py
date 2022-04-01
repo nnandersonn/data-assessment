@@ -16,3 +16,11 @@ def sales_reports(log_file):
 
 # runs the above function passing in our created log_file variable as the param
 sales_reports(log_file)
+
+def big_orders(log_file):
+    for line in log_file:
+        array = line.split(' ')
+        if int(array[2]) > 10:
+            print(line)
+    
+big_orders(log_file)
